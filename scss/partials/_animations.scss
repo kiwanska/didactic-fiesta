@@ -1,0 +1,14 @@
+@keyframes move {
+    0%  {transform: translate(0,50px)}
+    50% {transform: translate(20px,100px)}
+    100% {transform: translate(0,50px)}
+}
+
+
+.spin {
+	animation: spin 40s linear infinite;
+}
+
+@keyframes spin {
+  100% {transform: rotate(1turn); }
+}

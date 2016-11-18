@@ -10,17 +10,21 @@
 
 /* line 7, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/scss/partials/_list.scss */ .list ul { margin: 20px 20px; font-size: 11pt; }
 
-/* line 11, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/scss/partials/_list.scss */ .list li { margin: 5px 0; }
+/* line 11, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/scss/partials/_list.scss */ .list li { margin: 10px 0; }
+
+/* line 17, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/scss/partials/_list.scss */ .done { display: inline-block; padding: 1px 3px 2px; float: right; margin-right: 10px; }
+
+/* line 22, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/scss/partials/_list.scss */ .done:hover { cursor: pointer; }
 
 /* line 1, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/scss/partials/_form.scss */ .form { clear: both; text-align: center; }
 
-/* line 4, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/scss/partials/_form.scss */ .form input { margin: 10px 10px 20px 0; }
+/* line 4, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/scss/partials/_form.scss */ .form input { margin: 10px 10px 40px 0; }
 
 /* line 7, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/scss/partials/_form.scss */ .form input[type=submit]:hover { cursor: pointer; }
 
-/* line 13, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/scss/partials/_form.scss */ .form button { padding: 2px 6px 3px; }
+/* line 13, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/scss/partials/_form.scss */ .form button { margin-bottom: 20px; padding: 2px 6px 3px; }
 
-/* line 15, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/scss/partials/_form.scss */ .form button:hover { cursor: pointer; }
+/* line 16, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/scss/partials/_form.scss */ .form button:hover { cursor: pointer; }
 
 @keyframes move { 0% { transform: translate(0, 50px); }
   50% { transform: translate(20px, 100px); }

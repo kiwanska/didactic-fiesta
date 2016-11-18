@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import Form from './Form';
 import ToDo from './ToDo';
 import Done from './Done';
@@ -29,6 +29,15 @@ class App extends Component {
     ]
   }
 
+  addTask = (name) => {
+    const { tasks } = this.state;
+    const newTask = {name, 
+                     state: 'to do' };
+    this.setState({
+      tasks: [...tasks, newTask]
+    })
+  }
+
   render() {
 
     const { tasks } = this.state;
@@ -40,17 +49,17 @@ class App extends Component {
         </div>
         <div>
           <div className="list">
-            <h2>TO DO:</h2>
+            <h3>TO DO:</h3>
             <ToDo tasks={tasks} />
           </div>
           <div className="list">
-            <h2>DONE:</h2>
+            <h3>DONE:</h3>
             <Done tasks={tasks} />
           </div>
         </div>
         <div className="form">
           <h4>ADD NEW TO-DO TASK:</h4>
-          <Form />
+          <Form onFormSubmit={this.addTask} />
           <h4> CLEAR ALL DONE TASKS:</h4>
           <button>Clear</button>
         </div>

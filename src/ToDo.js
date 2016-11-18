@@ -3,13 +3,16 @@ import Task from './Task';
 
 function ToDo({ tasks }) {
 
-    const { name, state } = tasks;
-
     const list = tasks.filter(({ state }) => state === 'to do' )
-                      .map(({ name }) => <Task name={name} /> );
+                      .map(({ name, state }) => <Task 
+                                                    name={name} 
+                                                    state={state} 
+                                                    changeToDone={'fdskjh'}
+                                                    /> );
+
 
     return (
-      <ul>
+      <ul >
         {list}
       </ul>
     );

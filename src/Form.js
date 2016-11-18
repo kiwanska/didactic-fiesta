@@ -3,19 +3,26 @@ import React, { Component } from 'react';
 class Form extends Component {
 
   state = {
-    name: 'spacer z psem'
+    name: ''
   }
   
   onNameChange = (event) => {
     this.setState({
-      name: event.target.value
+      name: event.target.value,
     })
   }
 
-  onSubmit = (event) => {
-    const { onSubmit } = this.props;
+  onInputClick = (event) => {
+    this.setState({
+      name: '',
+    })
+  }
+
+  onSubmitClick = (event) => {
+    const { onFormSubmit } = this.props;
+    const { name } = this.state;
     event.preventDefault();
-    onSubmit(this.state);
+    name ? onFormSubmit(name) : '';
   }
 
   render() {
@@ -23,8 +30,14 @@ class Form extends Component {
 
     return (
       <form>
-        <input type="text" value={name} onChange={this.onNameChange} />
-        <input type="submit" value="Add" onClick={this.onSubmitClick} /> 
+        <input type="text" 
+                placeholder="wpisz kolejne zadanie" 
+                value={name} 
+                onChange={this.onNameChange} 
+                onClick={this.onInputClick} />
+        <input type="submit" 
+                value="Add" 
+                onClick={this.onSubmitClick} /> 
       </form>
     );
   }

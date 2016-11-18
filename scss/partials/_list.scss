@@ -9,7 +9,17 @@
         font-size: 11pt;
     }
     li {
-        margin: 5px 0;
+        margin: 10px 0;
     }
 
+}
+
+.done {
+    display: inline-block;
+    padding: 1px 3px 2px;
+    float: right;
+    margin-right: 10px;
+    &:hover {
+        cursor: pointer;
+    }
 }

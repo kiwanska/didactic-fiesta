@@ -11,13 +11,18 @@ class App extends Component {
   state = {
     tasks: [
       {
-        name: 'pranie',
-        state: 'to do'
-      },
-      {
         name: 'podlewanie kwiatków',
         state: 'done'
       },
+      {
+        name: 'spacer z psem',
+        state: 'done'
+      },
+      {
+        name: 'pranie',
+        state: 'to do'
+      },
+      
       {
         name: 'sprzątanie',
         state: 'to do'
@@ -25,10 +30,6 @@ class App extends Component {
       {
         name: 'odkurzanie',
         state: 'to do'
-      },
-      {
-        name: 'spacer z psem',
-        state: 'done'
       }
     ]
   }
@@ -51,14 +52,17 @@ class App extends Component {
   }
 
   changeToDone = (event) => {
-    console.log('kasia');
+    const { tasks } = this.state;
+    const taskToChange = tasks.filter(({ name, state }) => name === event);
+    taskToChange[0].state = "done";
+    this.setState({
+      tasks: [...tasks]
+    })
   }
 
   render() {
 
     const { tasks } = this.state;
-
-    // console.log(this.state[tasks[]])
 
     return (
       <div className="App">
@@ -68,7 +72,7 @@ class App extends Component {
         <div>
           <div className="list">
             <h3>TO DO:</h3>
-            <ToDo tasks={tasks} onButtonClick={this.changeToDone} />
+            <ToDo tasks={tasks} changeToDone={this.changeToDone} />
           </div>
           <div className="list">
             <h3>DONE:</h3>

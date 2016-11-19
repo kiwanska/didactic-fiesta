@@ -1,25 +1,24 @@
 import React, { Component } from 'react';
 
-
 class Task extends Component {
 
     onButtonClick = (event) => {
-        console.log(event.target);
-        // changeToDone(name)
+        const { changeToDone } = this.props;
+        const { name } = this.props;
+        changeToDone(name);
     }
-
 
     render() {
 
         const { name, state } = this.props;
-        const buttonDone = state === "to do" ? <button 
+        const buttonChangeToDone = state === "to do" ? <button 
                                                 className="done" 
                                                 name={name}
                                                 onClick={this.onButtonClick}
                                                 >&#x2713;</button> : '' ;
        
         return (
-          <li>{name}{buttonDone}</li> 
+          <li>{name}{buttonChangeToDone}</li> 
         )
 
     }

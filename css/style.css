@@ -12,9 +12,9 @@
 
 /* line 11, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/scss/partials/_list.scss */ .list li { margin: 10px 0; }
 
-/* line 17, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/scss/partials/_list.scss */ .done { display: inline-block; padding: 1px 3px 2px; float: right; margin-right: 10px; }
+/* line 17, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/scss/partials/_list.scss */ .to-do { display: inline-block; padding: 1px 3px 2px; float: right; margin-right: 10px; }
 
-/* line 22, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/scss/partials/_list.scss */ .done:hover { cursor: pointer; }
+/* line 22, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/scss/partials/_list.scss */ .to-do:hover { cursor: pointer; }
 
 /* line 1, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/scss/partials/_form.scss */ .form { clear: both; text-align: center; }
 

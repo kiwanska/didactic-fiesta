@@ -3,8 +3,8 @@ import Task from './Task';
 
 function Done({ tasks }) {
 
-    const list = tasks.filter(({ state }) => state === 'done' )
-                      .map(({ name }) => <Task name={name} /> );
+    const list = tasks.filter(({ isDone }) => (isDone) )
+                      .map(({ name, isDone }) => <Task name={name} isDone={isDone} /> );
 
     return (
       <ul>

@@ -11,32 +11,37 @@ class App extends Component {
   state = {
     tasks: [
       {
-        name: 'podlewanie kwiatków',
-        state: 'done'
+        id: 1,
+        name: 'buy eggplant',
+        isDone: true
       },
       {
-        name: 'spacer z psem',
-        state: 'done'
+        id: 2,
+        name: 'laundry',
+        isDone: true
       },
       {
-        name: 'pranie',
-        state: 'to do'
+        id: 3,
+        name: 'walk the dog',
+        isDone: false
       },
       
       {
-        name: 'sprzątanie',
-        state: 'to do'
+        id: 4,
+        name: 'mow the lawn',
+        isDone: false
       },
       {
-        name: 'odkurzanie',
-        state: 'to do'
+        id: 5,
+        name: 'save the world',
+        isDone: false
       }
     ]
   }
 
   clearDone = () => {
     const { tasks } = this.state;
-    const tasksToDo = tasks.filter(({ state }) => state === 'to do');
+    const tasksToDo = tasks.filter(({ isDone }) => (!isDone));
     this.setState({
       tasks: [...tasksToDo]
     })
@@ -45,16 +50,16 @@ class App extends Component {
   addTask = (name) => {
     const { tasks } = this.state;
     const newTask = {name, 
-                     state: 'to do' };
+                     isDone: false };
     this.setState({
       tasks: [...tasks, newTask]
     })
   }
 
-  changeToDone = (event) => {
+  changeToDone = (nameToChange) => {
     const { tasks } = this.state;
-    const taskToChange = tasks.filter(({ name, state }) => name === event);
-    taskToChange[0].state = "done";
+    const taskToChange = tasks.filter(({ name, isDone }) => name === nameToChange);
+    taskToChange[0].isDone = true;
     this.setState({
       tasks: [...tasks]
     })

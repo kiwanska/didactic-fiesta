@@ -1,43 +1,32 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class Form extends Component {
+class Form extends PureComponent {
 
-  state = {
-    name: ''
-  }
-  
-  onNameChange = (event) => {
-    this.setState({
-      name: event.target.value,
-    })
-  }
-
-  onInputClick = (event) => {
-    this.setState({
-      name: '',
-    })
-  }
+  clearInput = () => this.ref.value = '';
 
   onSubmitClick = (event) => {
     const { onFormSubmit } = this.props;
-    const { name } = this.state;
+    const name = this.ref.value;
     event.preventDefault();
-    name ? onFormSubmit(name) : '';
+    name && onFormSubmit(name);
+    this.clearInput();
   }
 
   render() {
-    const { name } = this.state;
 
     return (
       <form>
-        <input type="text" 
-                placeholder="wpisz kolejne zadanie" 
-                value={name} 
-                onChange={this.onNameChange} 
-                onClick={this.onInputClick} />
-        <input type="submit" 
-                value="Add" 
-                onClick={this.onSubmitClick} /> 
+        <input 
+          ref={(ref) => this.ref = ref}
+          type="text" 
+          placeholder="another task" 
+          onClick={this.clearInput} 
+        />
+        <input 
+          type="submit" 
+          value="Add" 
+          onClick={this.onSubmitClick} 
+        /> 
       </form>
     );
   }

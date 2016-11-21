@@ -9,7 +9,7 @@ class App extends Component {
     background: `#${Math.random().toString(16).substr(-6)}`,
     random: Math.floor(Math.random()*10),
     quotes: [
-      `Smile in the mirror. Do that every morning and you'll start to see a big difference in your life.`,
+      "Smile in the mirror. Do that every morning and you'll start to see a big difference in your life.",
       "It's a waste of time to think that if you colored a painting red what might have happened if you painted it black.",
       "There's a long life ahead of you and it's going to be beautiful, as long as you keep loving and hugging each other.",
       "A dream you dream alone is only a dream. A dream you dream together is reality.",

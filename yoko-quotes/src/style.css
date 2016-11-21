@@ -1,11 +1,10 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: pink;
 }
 
 body {
-  height: 5500px;
+  height: 6000px;
   font-family: sans-serif;
   font-weight: 200;
 }
@@ -21,8 +20,25 @@ body {
 
 span {
   display: inline-block;
+  white-space: pre;
+  font-size: 16px;
 }
 
-.pulse {
+.scroll {
+  position: fixed;
+  padding: 5px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  color: #fff;
+  font-weight: 500;
+  font-size: 10px;
+  text-align: center;
+  animation: pulse 1s infinite;
+}
 
+@keyframes pulse {
+  0%    {opacity: .3;}
+  100%  {opacity: .8;}
 }

@@ -23,7 +23,7 @@ class Letter extends Component {
 
   render(){
     const { children } = this.props;
-    return <span style={this.getStyle()}> {children}</span>
+    return <span style={this.getStyle()}>{children}</span>
   }
 }
 

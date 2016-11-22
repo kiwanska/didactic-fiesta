@@ -1,5 +1,6 @@
 # didactic-fiesta
 Wheather checker build with React
+**work in progress**
 
 
 start project:

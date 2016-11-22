@@ -5,7 +5,7 @@ import './style.css';
 class App extends Component {
  
   state = {
-    scrollY: 0,
+    scrollY: window.scrollY,
     background: `#${Math.random().toString(16).substr(-6)}`,
     random: Math.floor(Math.random()*10),
     quotes: [

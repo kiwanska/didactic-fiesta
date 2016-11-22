@@ -23,8 +23,8 @@ class App extends Component {
   }
   
   componentDidMount(){
-    window.addEventListener('scroll', this.onScroll);
     document.querySelector('body').style.backgroundColor = this.state.background;
+    window.addEventListener('scroll', this.onScroll);
   }
 
   onScroll = (event) => this.setState({

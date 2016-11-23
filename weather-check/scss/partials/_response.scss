@@ -8,6 +8,17 @@
 }
 
 .weather-icon {
-    max-width: 30px;
+    display: inline-block;
+    max-width: 35px;
     margin: 5px 0;
+    background-color: $white-half;
+    border-radius: 100%;
+}
+
+.weather-details {
+    font-size: 14px;
+    span {
+        font-size: 18px;
+        font-weight: 400;
+    }
 }

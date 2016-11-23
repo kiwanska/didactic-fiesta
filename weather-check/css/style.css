@@ -26,7 +26,11 @@
 
 /* line 4, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/weather-check/scss/partials/_response.scss */ .weather-desc span { font-size: 24px; font-weight: 400; }
 
-/* line 10, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/weather-check/scss/partials/_response.scss */ .weather-icon { max-width: 30px; margin: 5px 0; }
+/* line 10, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/weather-check/scss/partials/_response.scss */ .weather-icon { display: inline-block; max-width: 35px; margin: 5px 0; background-color: rgba(255, 255, 255, 0.5); border-radius: 100%; }
+
+/* line 18, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/weather-check/scss/partials/_response.scss */ .weather-details { font-size: 14px; }
+
+/* line 20, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/weather-check/scss/partials/_response.scss */ .weather-details span { font-size: 18px; font-weight: 400; }
 
 @keyframes move { 0% { transform: translate(0, 50px); }
   50% { transform: translate(20px, 100px); }

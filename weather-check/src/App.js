@@ -7,23 +7,30 @@ import '../css/style.css';
 class App extends Component {
 
   state = {
-    weather: {
-
-    }
+    cityList: {},
+    weather: {}
   }
 
-  componentDidMount() {
-    fetch('http://api.openweathermap.org/data/2.5/weather?q=London&APPID=ceaa19ef895b027145445d783601206e')
+  // componentDidMount() {
+  //   fetch('http://api.openweathermap.org/data/2.5/weather?q=London&APPID=ceaa19ef895b027145445d783601206e')
+  //     .then(response => response.json().then(weather => {
+  //         this.setState({ weather });
+  //       }).catch((err) => console.log('ERROR', err)));
+  // }
+
+  checkWeather = (cityName) => this.checkCity(cityName);
+
+  checkCity = (name) => {
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${name}&units=metric&APPID=ceaa19ef895b027145445d783601206e`)
       .then(response => response.json().then(weather => {
           this.setState({ weather });
         }).catch((err) => console.log('ERROR', err)));
   }
 
-  checkWeather = (cityName) => console.log(cityName);
-
   render() {
     const { weather } = this.state;
     console.log(weather);
+    const response = (weather.weather) && <Response weather={weather} />;
 
     return (
       <div className="App">
@@ -33,7 +40,7 @@ class App extends Component {
         <div className="content">
           <p>Hello!</p>
           <Form onFormSubmit={this.checkWeather} />
-          <Response weather={weather} />
+          {response}
         </div>
       </div>
     );

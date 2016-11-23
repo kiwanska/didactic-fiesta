@@ -1,0 +1,37 @@
+/* line 1, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/weather-check/scss/partials/_navbar.scss */ .react-logo { display: block; margin: 0 auto; height: 30px; }
+
+/* line 1, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/weather-check/scss/partials/_content.scss */ * { padding: 0; margin: 0; font-family: "Open Sans", sans-serif; }
+
+/* line 7, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/weather-check/scss/partials/_content.scss */ body { width: 100%; background-color: #42b3f4; color: #ffffff; }
+
+/* line 13, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/weather-check/scss/partials/_content.scss */ .container { width: 100%; max-width: 700px; margin: 5% auto; padding: 2%; }
+
+/* line 20, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/weather-check/scss/partials/_content.scss */ .content { margin-top: 50px; font-weight: 100; text-align: center; font-size: 18px; }
+
+/* line 1, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/weather-check/scss/partials/_form.scss */ label { display: block; margin: 10px 0; }
+
+/* line 4, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/weather-check/scss/partials/_form.scss */ label input { padding: 0 5px; margin: 0 10px; border: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.5); background-color: transparent; outline: 0; color: #ffffff; font-size: 18px; font-weight: 100; }
+
+/* line 14, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/weather-check/scss/partials/_form.scss */ label input::-webkit-input-placeholder { color: rgba(255, 255, 255, 0.5); }
+
+/* line 17, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/weather-check/scss/partials/_form.scss */ label input::-moz-placeholder { color: rgba(255, 255, 255, 0.5); }
+
+/* line 20, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/weather-check/scss/partials/_form.scss */ label input:-ms-input-placeholder { color: rgba(255, 255, 255, 0.5); }
+
+/* line 23, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/weather-check/scss/partials/_form.scss */ label input:-moz-placeholder { color: rgba(255, 255, 255, 0.5); }
+
+/* line 29, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/weather-check/scss/partials/_form.scss */ input[type=submit] { color: #ffffff; border-radius: 4px; background-color: transparent; border: 1px solid rgba(255, 255, 255, 0.5); padding: 3px 12px 5px; outline: 0; }
+
+/* line 1, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/weather-check/scss/partials/_response.scss */ .weather-desc { margin: 10px 0; line-height: 30px; }
+
+/* line 4, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/weather-check/scss/partials/_response.scss */ .weather-desc span { font-size: 24px; font-weight: 400; }
+
+/* line 10, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/weather-check/scss/partials/_response.scss */ .weather-icon { max-width: 30px; margin: 5px 0; }
+
+@keyframes move { 0% { transform: translate(0, 50px); }
+  50% { transform: translate(20px, 100px); }
+  100% { transform: translate(0, 50px); } }
+
+/* line 8, /Users/sobylmine/Wszystko/CODEWORK/react-with-kuba/didactic-fiesta/weather-check/scss/partials/_animations.scss */ .spin { animation: spin 40s linear infinite; }
+
+@keyframes spin { 100% { transform: rotate(1turn); } }

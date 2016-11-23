@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Response from './Response.js';
+import Form from './Form.js';
 import logo from './logo.svg';
 import '../css/style.css';
 
@@ -11,21 +13,17 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const data = fetch('http://api.openweathermap.org/data/2.5/weather?q=London&APPID=7ef88dd0d7db23ba7ca07e68793f8cd3')
+    fetch('http://api.openweathermap.org/data/2.5/weather?q=London&APPID=ceaa19ef895b027145445d783601206e')
       .then(response => response.json().then(weather => {
           this.setState({ weather });
         }).catch((err) => console.log('ERROR', err)));
   }
 
+  checkWeather = (cityName) => console.log(cityName);
 
   render() {
     const { weather } = this.state;
     console.log(weather);
-    const desc = (weather.weather) &&  weather.weather[1].description;
-    const iconUrl = (weather.weather) &&  `http://openweathermap.org/img/w/${weather.weather[1].icon}.png`;
-    const city = (weather.weather) &&  weather.name;
-
-    console.log(city);
 
     return (
       <div className="App">
@@ -34,8 +32,8 @@ class App extends Component {
         </div>
         <div className="content">
           <p>Hello!</p>
-          <p className="desc">Oh! You can experience {desc} in {city} now.</p>
-          <img src={iconUrl}></img>
+          <Form onFormSubmit={this.checkWeather} />
+          <Response weather={weather} />
         </div>
       </div>
     );

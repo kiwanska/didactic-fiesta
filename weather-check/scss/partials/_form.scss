@@ -1,0 +1,37 @@
+label {
+    display: block;
+    margin: 10px 0;
+    input {
+        padding: 0 5px;
+        margin: 0 10px;
+        border: 0;
+        border-bottom: 1px solid $white-half;
+        background-color: transparent;
+        outline: 0;
+        color: $white;
+        font-size: 18px;
+        font-weight: 100;
+        &::-webkit-input-placeholder {
+            color: $white-half;
+        }
+        &::-moz-placeholder {
+            color: $white-half;
+        }
+        &:-ms-input-placeholder {
+            color: $white-half;
+        }
+        &:-moz-placeholder {
+            color: $white-half;
+        }
+    }
+}
+
+input[type=submit] {
+    color: $white;
+    border-radius: 4px;
+    background-color: transparent;
+    border: 1px solid $white-half;
+    padding: 3px 12px 5px;
+    outline: 0;
+}
+
